@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package recomendacoes;
+
+option java_package = "br.com.caelum.eats.recomendacoes.grpc";
+
+message Restaurantes {
+  repeated int64 restauranteId = 1;
+}
+
+service RecomendacoesDeRestaurantes {
+  rpc Recomendacoes(Restaurantes) returns (Restaurantes) {}
+}
